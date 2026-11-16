@@ -1,0 +1,8 @@
+* RC charging. A 5 V step at t = 1 ms charges C1 through R1.
+* Time constant tau = R C = 1 ms: V(out) reaches 63% of 5 V at t = 2 ms.
+* The matrix A is the same at every time step: it is factored ONCE.
+V1 in 0 PULSE(0 5 1m)
+R1 in out 1k
+C1 out 0 1u
+.tran 10u 6m
+.end

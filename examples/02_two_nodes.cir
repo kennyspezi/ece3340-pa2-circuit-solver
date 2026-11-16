@@ -1,0 +1,9 @@
+* Two nodes, three resistors, one current source: the circuit on the slides
+* "Build the matrix one part at a time". All g = 1 S, so
+*   G = [ 2 -1 ; -1 2 ],  i = [ 1 ; 0 ].
+* Expected: V(1) = 0.6667 V, V(2) = 0.3333 V
+I1 0 1 1         ; 1 A into node 1
+Ra 1 2 1
+Rb 1 0 1
+Rc 2 0 1
+.end

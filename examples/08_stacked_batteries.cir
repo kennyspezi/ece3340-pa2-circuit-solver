@@ -1,0 +1,8 @@
+* Two 1.5 V cells in series driving a 100-ohm load.
+* Node "mid" touches only voltage sources: its KCL row has a 0 on the diagonal.
+* LU without row swaps divides by that 0; PLU swaps rows and gets
+* V(mid) = 1.5 V, V(top) = 3 V.
+V1 mid 0 1.5
+V2 top mid 1.5
+RL top 0 100
+.end

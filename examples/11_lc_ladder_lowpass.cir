@@ -1,0 +1,16 @@
+* Fifth-order LC ladder low-pass filter (Butterworth), cutoff 1 kHz,
+* 50-ohm source and load. Seven unknowns: four node voltages, two inductor
+* currents and one source current.
+* Input: a 1 V step at 1 ms. The output rises to 0.5 V (the 50/50 divider)
+* and rings. Try SIN(0 1 500) and SIN(0 1 2k) for V1: about 0.5 and 0.016 V
+* out for 1 V in.
+V1 in 0 PULSE(0 1 1m)
+Rs in n1 50
+C1 n1 0 1.97u
+L2 n1 n2 12.9m
+C3 n2 0 6.37u
+L4 n2 out 12.9m
+C5 out 0 1.97u
+RL out 0 50
+.tran 5u 10m
+.end

@@ -1,0 +1,14 @@
+* Resistors from 1 ohm to 1 Gohm in one circuit: entries of A span 9 orders
+* of magnitude, so A is badly conditioned. A pure-resistor G matrix is
+* diagonally dominant, so even LU without pivoting is stable here.
+* Pivoting is about zero/small PIVOTS,
+* conditioning is about the problem itself.
+I1 0 1 1m
+R1 1 0 1g
+R2 1 2 1
+R3 2 0 1g
+R4 2 3 1meg
+R5 3 0 1
+R6 3 4 1k
+R7 4 0 1g
+.end

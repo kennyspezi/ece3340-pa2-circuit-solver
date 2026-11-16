@@ -1,0 +1,6 @@
+* Voltage divider: 10 V across two equal resistors.
+* Expected: V(2) = 5 V, I(V1) = -5 A
+V1 1 0 10
+R1 1 2 1
+R2 2 0 1
+.end

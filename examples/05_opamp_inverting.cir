@@ -1,0 +1,9 @@
+* Inverting amplifier. The op-amp (+ input grounded) is a VCVS with
+* open-loop gain 1e5:  V(out) = -1e5 * V(minus).
+* Expected closed-loop gain -R2/R1 = -10. A is NOT symmetric.
+V1 in 0 SIN(0 0.1 1k)
+R1 in minus 10k
+R2 minus out 100k
+E1 out 0 minus 0 -1e5
+.tran 10u 3m
+.end

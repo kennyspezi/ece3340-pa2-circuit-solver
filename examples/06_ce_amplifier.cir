@@ -1,0 +1,11 @@
+* Small-signal model of a common-emitter BJT amplifier:
+*   r_pi = 2.5k between base and emitter (ground), and a VCCS
+*   gm = 40 mS from collector to emitter, controlled by V(base).
+* Expected gain V(out)/V(in) = -gm*RC * r_pi/(r_pi + Rs) = -57.1
+V1 in 0 SIN(0 10m 1k)
+Rs in base 1k
+Rpi base 0 2.5k
+G1 out 0 base 0 40m
+RC out 0 2k
+.tran 10u 3m
+.end

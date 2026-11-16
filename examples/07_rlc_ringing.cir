@@ -1,0 +1,10 @@
+* Series RLC driven by a 1 V step. Underdamped: it rings at about 5 kHz.
+*   f0 = 1/(2 pi sqrt(L C)) = 5.03 kHz,  damping ratio = (R/2) sqrt(C/L) = 0.16
+* Try a 10x larger step (.tran 20u 2m): the ringing dies out faster.
+* That extra damping comes from backward Euler, not from the circuit.
+V1 in 0 PULSE(0 1 0.1m)
+R1 in a 10
+L1 a out 1m
+C1 out 0 1u
+.tran 2u 2m
+.end

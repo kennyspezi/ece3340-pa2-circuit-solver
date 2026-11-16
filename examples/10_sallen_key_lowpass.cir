@@ -1,0 +1,13 @@
+* Active low-pass filter (Sallen-Key, unity gain), cutoff about 1.1 kHz.
+* The op-amp is a VCVS wired as a follower: V(out) = 1e5 * (V(p) - V(out)).
+* Input: a 1 kHz square wave. The filter keeps the low frequencies, so the
+* output is smooth and nearly a sine. Try SIN(0 1 200), SIN(0 1 1k),
+* SIN(0 1 5k) for V1: about 1, 0.8 and 0.05 V out for 1 V in.
+V1 in 0 PULSE(-1 1 0 1u 1u 0.5m 1m)
+R1 in m 10k
+R2 m p 10k
+C1 m out 20n
+C2 p 0 10n
+E1 out 0 p out 1e5
+.tran 2u 5m
+.end

@@ -1,0 +1,7 @@
+* A mistake on purpose: nodes x and y are connected to each other but not to
+* the rest of the circuit, so their voltages are undetermined.
+* The matrix is singular -- your PLU should report it instead of printing garbage.
+V1 1 0 5
+R1 1 0 1k
+R2 x y 1k
+.end

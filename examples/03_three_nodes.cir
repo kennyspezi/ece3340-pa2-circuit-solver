@@ -1,0 +1,11 @@
+* Pure nodal analysis (current sources only): A is the conductance matrix G.
+* Write the KCL equations by hand and compare. Same circuit as the worked
+* example in section 3 of the notes; ohms and amps keep the numbers simple.
+I1 0 1 2         ; 2 A into node 1
+R1 1 0 1
+R2 1 2 2
+R3 2 0 2
+R4 2 3 1
+R5 3 0 1
+I2 3 0 1         ; 1 A out of node 3
+.end
